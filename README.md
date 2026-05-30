@@ -20,7 +20,7 @@ Lightning-fast clipboard history for macOS. Press <kbd>⌘</kbd><kbd>⇧</kbd><k
 
 ### From a Release (recommended)
 
-1. Go to [Releases](https://github.com/zhaochang/clip-deck/releases) and download the latest `ClipDeck-<version>-arm64.dmg` (Apple Silicon) or `ClipDeck-<version>.dmg` (Intel).
+1. Go to [Releases](https://github.com/zc9632/clip-deck/releases) and download the latest `ClipDeck-<version>-arm64.dmg` (Apple Silicon) or `ClipDeck-<version>.dmg` (Intel).
 2. Open the `.dmg` and drag **ClipDeck** to `/Applications`.
 3. **First launch — bypass Gatekeeper.** Because ClipDeck is not yet signed with a paid Apple Developer ID, macOS will block the first open. You only need to do this once:
 
@@ -52,7 +52,7 @@ After you press <kbd>⏎</kbd>, the chosen entry is written to your system clipb
 ## Build from source
 
 ```bash
-git clone https://github.com/zhaochang/clip-deck.git
+git clone https://github.com/zc9632/clip-deck.git
 cd clip-deck
 npm install
 npm start          # run in dev mode
@@ -67,7 +67,7 @@ Distributables land in `dist/`.
 - [ ] Per-app filters
 - [ ] Pinned entries that don't get evicted
 - [ ] Code signing + auto-update
-- [ ] Windows & Linux ports (needs co-maintainers — see [#WANTED](https://github.com/zhaochang/clip-deck/issues))
+- [ ] Windows & Linux ports (needs co-maintainers — see [#WANTED](https://github.com/zc9632/clip-deck/issues))
 
 ## Privacy
 

@@ -9,10 +9,10 @@
     "email": "zheren1996@gmail.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zhaochang/clip-deck",
+  "homepage": "https://github.com/zc9632/clip-deck",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhaochang/clip-deck.git"
+    "url": "https://github.com/zc9632/clip-deck.git"
   },
   "scripts": {
     "start": "electron .",
