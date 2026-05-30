@@ -1,0 +1,72 @@
+{
+  "name": "clip-deck",
+  "productName": "ClipDeck",
+  "version": "0.1.0",
+  "description": "Lightning-fast clipboard history for macOS. Press ⌘⇧V to recall.",
+  "main": "main.js",
+  "author": {
+    "name": "Zhaochang",
+    "email": "zheren1996@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zhaochang/clip-deck",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaochang/clip-deck.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac --arm64 --x64",
+    "pack": "electron-builder --dir"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.zhaochang.clipdeck",
+    "productName": "ClipDeck",
+    "copyright": "Copyright © 2026 Zhaochang",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "package.json",
+      "!**/.DS_Store"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "extendInfo": {
+        "LSUIElement": true,
+        "NSSupportsAutomaticTermination": false,
+        "NSSupportsSuddenTermination": false
+      }
+    },
+    "dmg": {
+      "writeUpdateInfo": false
+    }
+  }
+}

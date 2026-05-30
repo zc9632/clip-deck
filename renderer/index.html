@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Clipboard History</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <header class="header">
+        <span class="brand">
+          <span class="dot"></span>
+          <span class="title">CLIPBOARD</span>
+        </span>
+        <input
+          id="search"
+          class="search"
+          type="text"
+          placeholder="search…"
+          spellcheck="false"
+          autocomplete="off"
+        />
+        <span id="counter" class="counter">0/0</span>
+      </header>
+
+      <main id="list" class="list" tabindex="-1"></main>
+
+      <div id="empty" class="empty">
+        <div class="empty-icon">▢</div>
+        <div class="empty-text">clipboard is empty</div>
+      </div>
+
+      <footer class="footer">
+        <div class="hints">
+          <span class="hint"><kbd>↑↓</kbd>nav</span>
+          <span class="hint"><kbd>⏎</kbd>paste</span>
+          <span class="hint"><kbd>⌘1-9</kbd>quick</span>
+          <span class="hint"><kbd>esc</kbd>close</span>
+        </div>
+        <button id="clear" class="clear">clear</button>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
