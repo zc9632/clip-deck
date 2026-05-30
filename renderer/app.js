@@ -5,6 +5,7 @@ const emptyEl = document.getElementById('empty');
 const searchEl = document.getElementById('search');
 const counterEl = document.getElementById('counter');
 const clearBtn = document.getElementById('clear');
+const quitBtn = document.getElementById('quit');
 
 let items = [];
 let filtered = [];
@@ -115,6 +116,12 @@ searchEl.addEventListener('input', () => {
 });
 
 document.addEventListener('keydown', (e) => {
+  // Cmd+Q quits the app entirely.
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'q') {
+    e.preventDefault();
+    window.cb.quit();
+    return;
+  }
   // Cmd+1..9 quick select
   if ((e.metaKey || e.ctrlKey) && /^[1-9]$/.test(e.key)) {
     e.preventDefault();
@@ -167,6 +174,10 @@ listEl.addEventListener('dblclick', (e) => {
 clearBtn.addEventListener('click', () => {
   window.cb.clear();
   searchEl.focus();
+});
+
+quitBtn.addEventListener('click', () => {
+  window.cb.quit();
 });
 
 // Re-focus search when window becomes visible

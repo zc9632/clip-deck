@@ -13,7 +13,7 @@ Lightning-fast clipboard history for macOS. Press <kbd>⌘</kbd><kbd>⇧</kbd><k
 - 🔍 Live search across all entries
 - 🎯 <kbd>⌘</kbd>+<kbd>1</kbd>–<kbd>9</kbd> to instantly paste one of the top 9 entries
 - 🖥️ Menu-bar app, no Dock icon, ~150 MB RAM
-- 🕶️ Adaptive frosted-glass UI that follows your system theme, with cyan accents
+- 🕶️ Dark frosted-glass UI with subtle cyan accents (independent of system theme)
 - 💾 In-memory only — nothing written to disk, nothing leaves your machine
 
 ## Install
@@ -45,6 +45,7 @@ Lightning-fast clipboard history for macOS. Press <kbd>⌘</kbd><kbd>⇧</kbd><k
 | Paste selected entry | <kbd>⏎</kbd> |
 | Quick-paste top 9 | <kbd>⌘</kbd>+<kbd>1</kbd>…<kbd>9</kbd> |
 | Close without pasting | <kbd>Esc</kbd> |
+| Quit ClipDeck | <kbd>⌘</kbd><kbd>Q</kbd> |
 | Search | Just start typing |
 
 After you press <kbd>⏎</kbd>, the chosen entry is written to your system clipboard and the panel closes. Press <kbd>⌘</kbd><kbd>V</kbd> as usual to paste into the target app.

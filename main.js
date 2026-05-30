@@ -7,6 +7,7 @@ const {
   clipboard,
   ipcMain,
   nativeImage,
+  nativeTheme,
   screen,
 } = require('electron');
 const path = require('path');
@@ -252,10 +253,27 @@ ipcMain.on('items:clear', () => {
   lastSig = '';
   broadcastItems();
 });
+ipcMain.on('app:quit', () => {
+  app.quit();
+});
 
 // ---------- app lifecycle ----------
 
+// Single-instance lock: when the user double-clicks the .app while it's already
+// running, second-instance fires and we surface the panel near the cursor.
+const gotLock = app.requestSingleInstanceLock();
+if (!gotLock) {
+  app.quit();
+} else {
+  app.on('second-instance', () => {
+    showWindowNearMouse();
+  });
+}
+
 app.whenReady().then(() => {
+  // Force dark appearance so vibrancy renders dark regardless of system theme.
+  nativeTheme.themeSource = 'dark';
+
   if (process.platform === 'darwin') app.dock?.hide();
   createWindow();
   createTray();
@@ -265,6 +283,9 @@ app.whenReady().then(() => {
 
   const ok = globalShortcut.register('CommandOrControl+Shift+V', toggleWindow);
   if (!ok) console.error('Failed to register global shortcut ⌘⇧V');
+
+  // Show the panel on first launch so the user gets immediate visual feedback.
+  showWindowNearMouse();
 });
 
 app.on('window-all-closed', (e) => {

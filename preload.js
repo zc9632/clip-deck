@@ -6,4 +6,5 @@ contextBridge.exposeInMainWorld('cb', {
   select: (id) => ipcRenderer.send('item:select', id),
   close: () => ipcRenderer.send('window:close'),
   clear: () => ipcRenderer.send('items:clear'),
+  quit: () => ipcRenderer.send('app:quit'),
 });
