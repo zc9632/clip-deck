@@ -13,7 +13,7 @@ Lightning-fast clipboard history for macOS. Press <kbd>⌘</kbd><kbd>⇧</kbd><k
 - 🔍 Live search across all entries
 - 🎯 <kbd>⌘</kbd>+<kbd>1</kbd>–<kbd>9</kbd> to instantly paste one of the top 9 entries
 - 🖥️ Menu-bar app, no Dock icon, ~150 MB RAM
-- 🕶️ Dark frosted-glass UI with subtle cyan accents
+- 🕶️ Adaptive frosted-glass UI that follows your system theme, with cyan accents
 - 💾 In-memory only — nothing written to disk, nothing leaves your machine
 
 ## Install
