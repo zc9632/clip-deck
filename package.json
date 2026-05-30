@@ -1,7 +1,7 @@
 {
   "name": "clip-deck",
   "productName": "ClipDeck",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightning-fast clipboard history for macOS. Press ⌘⇧V to recall.",
   "main": "main.js",
   "author": {
