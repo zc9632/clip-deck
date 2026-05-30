@@ -4,7 +4,7 @@ Lightning-fast clipboard history for macOS. Press <kbd>⌘</kbd><kbd>⇧</kbd><k
 
 > [中文说明 →](README.zh-CN.md)
 
-![screenshot placeholder — add a GIF/PNG to repo root and update this path](docs/screenshot.png)
+![ClipDeck panel showing recent clipboard entries](docs/screenshot.png)
 
 ## Features
 
